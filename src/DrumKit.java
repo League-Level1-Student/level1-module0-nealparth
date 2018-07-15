@@ -5,6 +5,7 @@
 
 
 import java.applet.AudioClip;
+import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -17,6 +18,7 @@ import javax.swing.JApplet;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.CompoundBorder;
 
 public class DrumKit implements MouseListener {
 
@@ -28,24 +30,26 @@ public class DrumKit implements MouseListener {
 
     private void getGoing() throws MalformedURLException {
    	 // 1. Make a JFrame variable and initialize it using "new JFrame()"
-   	 
+   	 JFrame bot= new JFrame();
    	 // 2. Make the frame visible and 
     //     set its default close operation to JFrame.EXIT_ON_CLOSE
-   	 
+   	 bot.setVisible(true);
+   	 bot.setDefaultCloseOperation(bot.EXIT_ON_CLOSE);
    	 // 3. Set the size of the frame
-   	 
+   	 bot.setSize(10, 10);
    	 // 4. Set the title of the frame
-   	 
+   	 bot.setTitle("nice");
    	 // 5. Make a JPanel variable and initialize it using "new JPanel().
-   	 
+   	 JPanel pan= new JPanel();
    	 // 6. Add the panel to the frame. (The panel is invisible.)
-    
+    bot.add(pan);
    	 // 7. Download an image of a drum from the Internet. Drop it into your Eclipse project under "default package".
    	 // 8. Put the name of your image in a String variable.
-    
+    String drum= "https://www.google.com/search?q=drum+kit&rlz=1C5CHFA_enUS766US766&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiL59_X4KHcAhVGCKwKHZqMDVwQ_AUICygC&biw=1200&bih=907";
    	 // 9. Edit the next line to use your String variable
-// drumLabelWithImage = createLabelImage(drumImageString);
-   	 
+// drumLabelWithImage = createLabelImage(drumImageString);\
+    Component red;
+   	 red= createLabelImage(drum);
    	 // 10. Add the image to the panel
     
    	 // 11. Set the layout of the panel to "new GridLayout()"
