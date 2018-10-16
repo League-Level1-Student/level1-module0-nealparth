@@ -37,7 +37,7 @@ public void showButton() {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	JButton buttonClicked = (JButton) e.getSource();
+	
 	if(buttonClicked.equals(button)){
 		playSound("airplane-landing_daniel_simion.wav");
 	}
